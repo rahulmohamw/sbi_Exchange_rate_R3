@@ -9,9 +9,6 @@ Well, worry no more. This project saves the daily SBI forex rates in a CSV file,
 
 <br/>
 
-OR download the CSV files and use with Excel or Google Sheets
-![Download historical SBI TTBR CSV](https://raw.githubusercontent.com/sahilgupta/sbi_forex_rates/main/images/Download%20historical%20SBI%20TTBR%20CSV.gif)
-<br/>
 
 The PDFs (saved from the SBI servers) are available in the *pdf_files/* folder. Direct link to each day's PDF is also published along with the data for quick verification. 
 
