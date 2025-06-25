@@ -7,9 +7,6 @@ Well, worry no more. This project saves the daily SBI forex rates in a CSV file,
 - The new rates are added daily, automatically
 - Fully compatible with Microsoft Excel or Google Sheets
 
-You can easily [browse and search the rates on GitHub](https://github.com/sahilgupta/sbi_forex_rates/tree/main/csv_files) itself:
-
-![Browse historical SBI TTBR on GitHub](https://raw.githubusercontent.com/sahilgupta/sbi_forex_rates/main/images/Browse%20historical%20SBI%20TTBR%20on%20GitHub.gif)
 <br/>
 
 OR download the CSV files and use with Excel or Google Sheets
