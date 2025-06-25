@@ -38,3 +38,7 @@ Credit for data prior to Dec 2022 goes to:
 - Forex Rate Card archives of Maneesh K. Singh & Co. [2021](https://mksco.in/forex-card-rates-2021/) and [2022](https://mksco.in/forex-card-rates-2022/)
 
 - Internet Archive Wayback Machine
+
+- https://github.com/sahilgupta/sbi-fx-ratekeeper for sharing the code for csv dump
+
+- Duplicating the same to preserve the data and code.
