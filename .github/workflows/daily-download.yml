@@ -3,9 +3,10 @@ name: Download the file from SBI server, at 3:00 PM everyday
 
 on:
   schedule:
-    # Runs "at 4:30 PM and 10:30 PM IST time (i.e. 10:30 AM and 4:30 PM UTC)" (see https://crontab.guru)
-    - cron: "30 10,16 * * *"
-  workflow_dispatch:
+      # Runs every 5 minutes from 8:00 AM to 5:00 PM IST (2:30 AM to 11:30 AM UTC)
+      # IST is UTC+5:30, so 8:00 AM IST = 2:30 AM UTC, 5:00 PM IST = 11:30 AM UTC
+      - cron: "*/5 2-11 * * *"
+    workflow_dispatch:
 
 
 jobs:
