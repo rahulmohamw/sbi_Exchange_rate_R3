@@ -4,7 +4,7 @@ on:
   schedule:
     # Runs every 5 minutes from 8:00 AM to 5:00 PM IST (2:30 AM to 11:30 AM UTC)
     # IST is UTC+5:30, so 8:00 AM IST = 2:30 AM UTC, 5:00 PM IST = 11:30 AM UTC
-    - cron: "*/5 2-11 * * *"
+    - cron: "0,30 2-11 * * *"  # Every 30 minutes
   workflow_dispatch:
 jobs:
   build:
