@@ -2088,3 +2088,4 @@ Traceback (most recent call last):
   File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 240, in get_latest_pdf_from_sbi
     raise Exception("Unable to retrieve a valid PDF")
 Exception: Unable to retrieve a valid PDF
+2025-07-01 08:53:14,521 - __main__ - WARNING - Ambiguous date found: Date 01-07-2025. Using file creation date as tie-breaker.
