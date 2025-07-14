@@ -2282,3 +2282,122 @@ Exception: Unable to retrieve a valid PDF
 2025-07-14 03:42:12,166 - __main__ - WARNING - Ambiguous date found: Date 11-07-2025. Using file creation date as tie-breaker.
 2025-07-14 04:42:50,623 - __main__ - WARNING - Ambiguous date found: Date 11-07-2025. Using file creation date as tie-breaker.
 2025-07-14 05:26:21,588 - __main__ - WARNING - Ambiguous date found: Date 11-07-2025. Using file creation date as tie-breaker.
+2025-07-14 06:35:19,562 - __main__ - ERROR - Failed to download PDF from https://www.sbi.co.in/documents/16012/1400784/FOREX_CARD_RATES.pdf
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 897, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 897, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 887, in urlopen
+    retries = retries.increment(method, url, response=response, _pool=self)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sbi.co.in', port=443): Max retries exceeded with url: /documents/16012/1400784/FOREX_CARD_RATES.pdf (Caused by ResponseError('too many 500 error responses'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 221, in get_latest_pdf_from_sbi
+    response = download_pdf(url, session)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 211, in download_pdf
+    return session.get(url, timeout=10)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/sessions.py", line 724, in send
+    history = [resp for resp in gen]
+                                ^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/sessions.py", line 265, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/adapters.py", line 691, in send
+    raise RetryError(e, request=request)
+requests.exceptions.RetryError: HTTPSConnectionPool(host='sbi.co.in', port=443): Max retries exceeded with url: /documents/16012/1400784/FOREX_CARD_RATES.pdf (Caused by ResponseError('too many 500 error responses'))
+2025-07-14 06:37:36,577 - __main__ - ERROR - Failed to download PDF from https://bank.sbi/documents/16012/1400784/FOREX_CARD_RATES.pdf
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 830, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 897, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 897, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 897, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/connectionpool.py", line 887, in urlopen
+    retries = retries.increment(method, url, response=response, _pool=self)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/urllib3/util/retry.py", line 594, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='bank.sbi', port=443): Max retries exceeded with url: /documents/16012/1400784/FOREX_CARD_RATES.pdf (Caused by ResponseError('too many 500 error responses'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 221, in get_latest_pdf_from_sbi
+    response = download_pdf(url, session)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 211, in download_pdf
+    return session.get(url, timeout=10)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.11/x64/lib/python3.12/site-packages/requests/adapters.py", line 691, in send
+    raise RetryError(e, request=request)
+requests.exceptions.RetryError: HTTPSConnectionPool(host='bank.sbi', port=443): Max retries exceeded with url: /documents/16012/1400784/FOREX_CARD_RATES.pdf (Caused by ResponseError('too many 500 error responses'))
+2025-07-14 06:37:36,578 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2025-07-14 06:37:47,688 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2025-07-14 06:40:42,049 - __main__ - INFO - Failed to download PDF using proxy
+2025-07-14 06:40:42,049 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2025-07-14 06:42:58,860 - __main__ - INFO - Failed to download PDF using proxy
+2025-07-14 06:42:58,860 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2025-07-14 06:45:32,935 - __main__ - INFO - Failed to download PDF using proxy
+2025-07-14 06:45:32,936 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2025-07-14 06:48:47,298 - __main__ - INFO - Failed to download PDF using proxy
+2025-07-14 06:48:47,298 - __main__ - ERROR - An error occurred: Unable to retrieve a valid PDF
+Traceback (most recent call last):
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 354, in <module>
+    file_content = get_latest_pdf_from_sbi()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 240, in get_latest_pdf_from_sbi
+    raise Exception("Unable to retrieve a valid PDF")
+Exception: Unable to retrieve a valid PDF
