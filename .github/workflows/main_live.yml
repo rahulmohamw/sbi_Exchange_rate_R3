@@ -10,7 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Update timestamp
-        run: echo "Last updated: $(date)" > .github/keepalive
+        run: |
+          mkdir -p .github
+          echo "Last updated: $(date)" > .github/keepalive
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
