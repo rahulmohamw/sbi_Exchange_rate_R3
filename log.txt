@@ -2933,3 +2933,4 @@ Traceback (most recent call last):
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='sbi.co.in', port=443): Max retries exceeded with url: /documents/16012/1400784/FOREX_CARD_RATES.pdf (Caused by ReadTimeoutError("HTTPSConnectionPool(host='sbi.co.in', port=443): Read timed out. (read timeout=10)"))
 2025-08-01 05:33:05,238 - __main__ - WARNING - Ambiguous date found: Date 01-08-2025. Using file creation date as tie-breaker.
 2025-08-01 06:34:06,612 - __main__ - WARNING - Ambiguous date found: Date 01-08-2025. Using file creation date as tie-breaker.
+2025-08-01 07:27:11,813 - __main__ - WARNING - Ambiguous date found: Date 01-08-2025. Using file creation date as tie-breaker.
