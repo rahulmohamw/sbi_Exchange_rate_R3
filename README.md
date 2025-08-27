@@ -36,3 +36,5 @@ Credit for data prior to Dec 2022 goes to:
 - https://github.com/sahilgupta/sbi-fx-ratekeeper for sharing the code for csv dump
 
 - Duplicating the same to preserve the data and code.
+
+- Update - 27.08.25
