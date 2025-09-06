@@ -3482,3 +3482,4 @@ Exception: Unable to retrieve a valid PDF
 2025-09-06 02:53:55,263 - __main__ - WARNING - Ambiguous date found: Date 04-09-2025. Using file creation date as tie-breaker.
 2025-09-06 03:27:48,417 - __main__ - WARNING - Ambiguous date found: Date 04-09-2025. Using file creation date as tie-breaker.
 2025-09-06 03:45:02,682 - __main__ - WARNING - Ambiguous date found: Date 04-09-2025. Using file creation date as tie-breaker.
+2025-09-06 04:21:29,206 - __main__ - WARNING - Ambiguous date found: Date 04-09-2025. Using file creation date as tie-breaker.
