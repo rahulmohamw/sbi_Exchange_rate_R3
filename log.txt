@@ -3768,3 +3768,4 @@ Traceback (most recent call last):
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.sbi.co.in', port=443): Max retries exceeded with url: /documents/16012/1400784/FOREX_CARD_RATES.pdf (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f1f6fa45d60>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
 2025-09-14 06:49:36,166 - __main__ - WARNING - Ambiguous date found: Date 12-09-2025. Using file creation date as tie-breaker.
+2025-09-14 07:19:17,082 - __main__ - WARNING - Ambiguous date found: Date 12-09-2025. Using file creation date as tie-breaker.
