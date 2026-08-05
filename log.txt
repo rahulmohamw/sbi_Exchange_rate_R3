@@ -177459,3 +177459,5 @@ Exception: Unable to retrieve a valid PDF
 2026-08-04 10:47:16,265 - __main__ - WARNING - Ambiguous date found: Date 04-08-2026. Using file creation date as tie-breaker.
 2026-08-04 13:02:04,109 - __main__ - WARNING - Ambiguous date found: Date 04-08-2026. Using file creation date as tie-breaker.
 2026-08-05 05:14:45,761 - __main__ - WARNING - Ambiguous date found: Date 04-08-2026. Using file creation date as tie-breaker.
+2026-08-05 08:01:55,112 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2026-08-05 08:02:10,143 - __main__ - WARNING - Ambiguous date found: Date 05-08-2026. Using file creation date as tie-breaker.
