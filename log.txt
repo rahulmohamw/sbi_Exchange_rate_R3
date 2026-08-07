@@ -177473,3 +177473,52 @@ Exception: Unable to retrieve a valid PDF
 2026-08-07 08:34:16,524 - __main__ - WARNING - Ambiguous date found: Date 07-08-2026. Using file creation date as tie-breaker.
 2026-08-07 10:01:00,781 - __main__ - WARNING - Ambiguous date found: Date 07-08-2026. Using file creation date as tie-breaker.
 2026-08-07 11:22:27,123 - __main__ - WARNING - Ambiguous date found: Date 07-08-2026. Using file creation date as tie-breaker.
+2026-08-07 12:08:30,598 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2026-08-07 12:08:50,226 - __main__ - WARNING - Failed to process PDF: EOF marker not found. Attempting to process as image.
+2026-08-07 12:08:50,335 - __main__ - ERROR - An error occurred: Unable to get page count.
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't read xref table
+Traceback (most recent call last):
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 302, in process_content
+    reader = PyPDF2.PdfReader(file_content, strict=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/PyPDF2/_reader.py", line 317, in __init__
+    self.read(stream)
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/PyPDF2/_reader.py", line 1409, in read
+    self._find_eof_marker(stream)
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/PyPDF2/_reader.py", line 1465, in _find_eof_marker
+    raise PdfReadError("EOF marker not found")
+PyPDF2.errors.PdfReadError: EOF marker not found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 602, in pdfinfo_from_path
+    raise ValueError
+ValueError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 355, in <module>
+    process_content(file_content, save_file=True)
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 321, in process_content
+    extracted_date_time, rates_data = process_as_image(file_content)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 247, in process_as_image
+    pages_images = convert_from_bytes(file_content.getvalue(), dpi=500, size=2000)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 359, in convert_from_bytes
+    return convert_from_path(
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 611, in pdfinfo_from_path
+    raise PDFPageCountError(
+pdf2image.exceptions.PDFPageCountError: Unable to get page count.
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't read xref table
+
