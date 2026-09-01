@@ -177571,3 +177571,4 @@ Syntax Error: Couldn't read xref table
 2026-08-12 12:09:45,220 - __main__ - WARNING - Ambiguous date found: Date 12-08-2026. Using file creation date as tie-breaker.
 2026-08-13 04:12:04,917 - __main__ - WARNING - Ambiguous date found: Date 12-08-2026. Using file creation date as tie-breaker.
 2026-08-24 04:20:51,995 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2026-09-01 07:20:30,566 - __main__ - WARNING - Ambiguous date found: Date 01-09-2026. Using file creation date as tie-breaker.
