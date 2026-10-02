@@ -177601,3 +177601,32 @@ Syntax Error: Couldn't read xref table
 2026-09-14 14:46:09,706 - __main__ - WARNING - Ambiguous date found: Date 11-09-2026. Using file creation date as tie-breaker.
 2026-10-01 08:22:21,344 - __main__ - WARNING - Ambiguous date found: Date 01-10-2026. Using file creation date as tie-breaker.
 2026-10-01 15:34:59,813 - __main__ - WARNING - Ambiguous date found: Date 01-10-2026. Using file creation date as tie-breaker.
+2026-10-02 07:58:51,253 - __main__ - ERROR - Failed to download PDF from https://www.sbi.co.in/documents/16012/1400784/FOREX_CARD_RATES.pdf
+Traceback (most recent call last):
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 222, in get_latest_pdf_from_sbi
+    response.raise_for_status()
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://sbi.bank.in/documents/16012/1400784/FOREX_CARD_RATES.pdf
+2026-10-02 07:58:52,644 - __main__ - ERROR - Failed to download PDF from https://bank.sbi/documents/16012/1400784/FOREX_CARD_RATES.pdf
+Traceback (most recent call last):
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 222, in get_latest_pdf_from_sbi
+    response.raise_for_status()
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://sbi.bank.in/documents/16012/1400784/FOREX_CARD_RATES.pdf
+2026-10-02 07:58:52,644 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2026-10-02 08:00:30,513 - __main__ - INFO - Failed to download PDF using proxy
+2026-10-02 08:00:30,513 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2026-10-02 08:00:57,707 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2026-10-02 08:01:01,406 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2026-10-02 08:01:07,299 - __main__ - INFO - Failed to download PDFs directly. Attempting with proxies...
+2026-10-02 08:02:40,348 - __main__ - INFO - Failed to download PDF using proxy
+2026-10-02 08:02:40,348 - __main__ - ERROR - An error occurred: Unable to retrieve a valid PDF
+Traceback (most recent call last):
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 354, in <module>
+    file_content = get_latest_pdf_from_sbi()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/sbi_Exchange_rate_R3/sbi_Exchange_rate_R3/main.py", line 240, in get_latest_pdf_from_sbi
+    raise Exception("Unable to retrieve a valid PDF")
+Exception: Unable to retrieve a valid PDF
